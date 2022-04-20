@@ -18,7 +18,7 @@ container = db.get_container_client(CONTAINER_ID)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('shop.html')
 
 
 @app.route('/shop')
