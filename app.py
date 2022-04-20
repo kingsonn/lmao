@@ -1,18 +1,14 @@
 from flask import Flask, request, render_template
-import config
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.exceptions as exceptions
 import uuid
 app = Flask(__name__)
-HOST = config.settings['host']
-MASTER_KEY = config.settings['master_key']
-DATABASE_ID = config.settings['database_id']
-CONTAINER_ID = config.settings['container_id']
 
-client = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY}, user_agent="CosmosDBPythonQuickstart", user_agent_overwrite=True)
 
-db = client.get_database_client(DATABASE_ID)
-container = db.get_container_client(CONTAINER_ID)
+client = cosmos_client.CosmosClient('https://bloodbank.documents.azure.com:443/', {'masterKey': 'ltRr4lvPImIBK2wvyuubTsFDlrImlthgWoiRakkn5RKREIV4Cwt7KWLXwhHmlQRg1SC5PZzs80ULZMDGVywYRA=='}, user_agent="CosmosDBPythonQuickstart", user_agent_overwrite=True)
+
+db = client.get_database_client('Test')
+container = db.get_container_client('getawhey')
 
 @app.route('/')
 def home():
