@@ -1,5 +1,3 @@
-import uuid
-
 from flask import Flask, request, render_template
 import config
 import azure.cosmos.cosmos_client as cosmos_client
@@ -32,7 +30,7 @@ def shop():
 def free():
     if request.method == "POST":
         order = {
-            'id': "'"+str(uuid.uuid1())+"'",
+            'id': "hhh",
             'email': "hanson@gmail.com",
             'name': "Hanson",
             'contactNum': 1234567891
