@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.exceptions as exceptions
-import uuid
+
 app = Flask(__name__)
 
 
@@ -23,7 +23,7 @@ def shop():
 def free():
     if request.method == "POST":
         order = {
-            'id': "'"+str(uuid.uuid1())+"'",
+            'id': "hhg",
             'email': "hanson@gmail.com",
             'name': "Hanson",
             'contactNum': 1234567891
