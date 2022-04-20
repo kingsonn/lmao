@@ -1,5 +1,5 @@
 import uuid
-from pickle import TRUE
+
 from flask import Flask, request, render_template
 import config
 import azure.cosmos.cosmos_client as cosmos_client
@@ -48,4 +48,4 @@ def free():
 
 if __name__ == '__main__':
     print(uuid.uuid1())
-    app.run(debug=True)
+    app.run()
