@@ -2,3 +2,4 @@ azure-core==1.1.1
 azure-cosmos==4.1.0
 Flask
 gunicorn==20.0.4
+uuid
