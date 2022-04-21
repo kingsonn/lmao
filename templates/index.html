@@ -95,7 +95,7 @@ img.emoji {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
                 z-index: 61; /* Sit on top */
-                padding-top: 20%; /* Location of the box */
+                padding-top: 7%; /* Location of the box */
                 left: 0;
                 top: 0;
                 width: 100%; /* Full width */
@@ -374,7 +374,10 @@ var pincode_check = {"ajaxurl":"https:\/\/getawhey.in\/wp-admin\/admin-ajax.php"
       <span class="close">&times;</span>
 
         <img style="width:60%; margin: 0px 17%;" src="./static/free.jpg"/>
-        <form action="/free" method="POST">
+       <form action="/free" method="POST">
+            <input id="name" name="name" type="text" placeholder="Enter your name"/>
+            <input id="email" name="email" type="email" placeholder="Enter your email"/>
+            <input id="number" name="number" type="number" placeholder="Enter your number"/>
             <button style="border-radius:10px; text-align:center; margin: 0px 30%" type="submit" >Get a free scoop</button>
         </form>
     </div>
