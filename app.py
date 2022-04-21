@@ -22,11 +22,14 @@ def shop():
 @app.route('/free', methods=["GET", "POST"])
 def free():
     if request.method == "POST":
+        name = request.form['name']
+        email = request.form['email']
+        number = request.form['number']
         order = {
-            'id': "hhg",
-            'email': "hanson@gmail.com",
-            'name': "Hanson",
-            'contactNum': 1234567891
+            'id': email,
+            'email': email,
+            'name': name,
+            'contactNum': number
         }
         try:
             container.create_item(body=order)
